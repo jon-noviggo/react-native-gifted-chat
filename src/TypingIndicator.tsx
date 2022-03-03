@@ -6,9 +6,15 @@ import Color from './Color'
 
 interface Props {
   isTyping?: boolean
+  isTypingIndicatorBackgroundColor?: string
+  isTypingIndicatorDotsColor?: string
 }
 
-const TypingIndicator = ({ isTyping }: Props) => {
+const TypingIndicator = ({
+  isTyping,
+  isTypingIndicatorBackgroundColor,
+  isTypingIndicatorDotsColor,
+}: Props) => {
   const { yCoords, heightScale, marginScale } = React.useMemo(
     () => ({
       yCoords: new Animated.Value(200),
@@ -71,6 +77,11 @@ const TypingIndicator = ({ isTyping }: Props) => {
       style={[
         styles.container,
         {
+          backgroundColor: isTypingIndicatorBackgroundColor
+            ? isTypingIndicatorBackgroundColor
+            : Color.leftBubbleBackground,
+        },
+        {
           transform: [
             {
               translateY: yCoords,
@@ -86,7 +97,11 @@ const TypingIndicator = ({ isTyping }: Props) => {
           style={{ marginLeft: 6, marginTop: 7.2 }}
           dotRadius={4}
           dotMargin={5.5}
-          dotColor={'rgba(0, 0, 0, 0.38)'}
+          dotColor={
+            isTypingIndicatorDotsColor
+              ? isTypingIndicatorDotsColor
+              : 'rgba(0, 0, 0, 0.38)'
+          }
         />
       ) : null}
     </Animated.View>

@@ -87,6 +87,8 @@ export interface MessageContainerProps<TMessage extends IMessage> {
   onQuickReply?(replies: Reply[]): void
   infiniteScroll?: boolean
   isLoadingEarlier?: boolean
+  isTypingIndicatorBackgroundColor?: string
+  isTypingIndicatorDotsColor?: string
 }
 
 interface State {
@@ -150,7 +152,15 @@ export default class MessageContainer<
     if (Platform.OS === 'web') {
       return null
     }
-    return <TypingIndicator isTyping={this.props.isTyping || false} />
+    return (
+      <TypingIndicator
+        isTyping={this.props.isTyping || false}
+        isTypingIndicatorBackgroundColor={
+          this.props.isTypingIndicatorBackgroundColor
+        }
+        isTypingIndicatorDotsColor={this.props.isTypingIndicatorDotsColor}
+      />
+    )
   }
 
   renderFooter = () => {
