@@ -332,9 +332,9 @@ declare class GiftedChat<TMessage extends IMessage = IMessage> extends React.Com
     notifyInputTextReset(): void;
     onInitialLayoutViewLayout: (e: any) => void;
     onMainViewLayout: (e: any) => void;
-    renderInputToolbar(): {} | null | undefined;
-    renderChatFooter(): {} | null | undefined;
-    renderLoading(): {} | null | undefined;
+    renderInputToolbar(): React.ReactNode;
+    renderChatFooter(): React.ReactNode;
+    renderLoading(): React.ReactNode;
     render(): JSX.Element;
 }
 export * from './Models';

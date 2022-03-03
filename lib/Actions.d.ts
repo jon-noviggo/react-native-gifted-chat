@@ -27,6 +27,6 @@ export default class Actions extends React.Component<ActionsProps> {
         actionSheet: PropTypes.Requireable<(...args: any[]) => any>;
     };
     onActionsPress: () => void;
-    renderIcon(): {} | null | undefined;
+    renderIcon(): React.ReactNode;
     render(): JSX.Element;
 }

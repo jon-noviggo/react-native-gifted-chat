@@ -50,6 +50,6 @@ export default class Avatar<TMessage extends IMessage = IMessage> extends React.
             right: PropTypes.Requireable<number | boolean | object>;
         }>>;
     };
-    renderAvatar(): {} | null | undefined;
+    renderAvatar(): React.ReactNode;
     render(): JSX.Element | null;
 }

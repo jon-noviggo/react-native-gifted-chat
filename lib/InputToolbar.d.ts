@@ -50,9 +50,9 @@ export default class InputToolbar extends React.Component<InputToolbarProps, {
     componentWillUnmount(): void;
     keyboardWillShow: () => void;
     keyboardWillHide: () => void;
-    renderActions(): {} | null | undefined;
-    renderSend(): {} | null | undefined;
-    renderComposer(): {} | null | undefined;
+    renderActions(): React.ReactNode;
+    renderSend(): React.ReactNode;
+    renderComposer(): React.ReactNode;
     renderAccessory(): JSX.Element | null;
     render(): JSX.Element;
 }

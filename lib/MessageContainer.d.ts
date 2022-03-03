@@ -27,6 +27,8 @@ export interface MessageContainerProps<TMessage extends IMessage> {
     onQuickReply?(replies: Reply[]): void;
     infiniteScroll?: boolean;
     isLoadingEarlier?: boolean;
+    isTypingIndicatorBackgroundColor?: string;
+    isTypingIndicatorDotsColor?: string;
 }
 interface State {
     showScrollBottom: boolean;
@@ -80,18 +82,18 @@ export default class MessageContainer<TMessage extends IMessage = IMessage> exte
         hasScrolled: boolean;
     };
     renderTypingIndicator: () => JSX.Element | null;
-    renderFooter: () => {} | null | undefined;
-    renderLoadEarlier: () => {} | null | undefined;
+    renderFooter: () => React.ReactNode;
+    renderLoadEarlier: () => React.ReactNode;
     scrollTo(options: {
         animated?: boolean;
         offset: number;
     }): void;
     scrollToBottom: (animated?: boolean) => void;
     handleOnScroll: (event: NativeSyntheticEvent<NativeScrollEvent>) => void;
-    renderRow: ({ item, index }: ListRenderItemInfo<TMessage>) => {} | null | undefined;
-    renderChatEmpty: () => {} | null | undefined;
+    renderRow: ({ item, index }: ListRenderItemInfo<TMessage>) => React.ReactNode;
+    renderChatEmpty: () => React.ReactNode;
     renderHeaderWrapper: () => JSX.Element;
-    renderScrollBottomComponent(): {} | null | undefined;
+    renderScrollBottomComponent(): React.ReactNode;
     renderScrollToBottomWrapper(): JSX.Element;
     onLayoutList: () => void;
     onEndReached: ({ distanceFromEnd }: {

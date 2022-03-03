@@ -60,9 +60,9 @@ export default class Message<TMessage extends IMessage = IMessage> extends React
         onMessageLayout: PropTypes.Requireable<(...args: any[]) => any>;
     };
     shouldComponentUpdate(nextProps: MessageProps<TMessage>): boolean;
-    renderDay(): {} | null | undefined;
-    renderBubble(): {} | null | undefined;
-    renderSystemMessage(): {} | null | undefined;
+    renderDay(): React.ReactNode;
+    renderBubble(): React.ReactNode;
+    renderSystemMessage(): React.ReactNode;
     renderAvatar(): JSX.Element | null;
     render(): JSX.Element | null;
 }

@@ -125,25 +125,25 @@ export default class Bubble<TMessage extends IMessage = IMessage> extends React.
     };
     onPress: () => void;
     onLongPress: () => void;
-    styledBubbleToNext(): (false | ViewStyle | import("react-native").RegisteredStyle<ViewStyle> | import("react-native").RecursiveArray<false | ViewStyle | import("react-native").RegisteredStyle<ViewStyle> | null | undefined> | {
+    styledBubbleToNext(): (StyleProp<ViewStyle> | {
         borderBottomLeftRadius: number;
     } | {
         borderBottomRightRadius: number;
-    } | null | undefined)[] | null;
-    styledBubbleToPrevious(): (false | ViewStyle | import("react-native").RegisteredStyle<ViewStyle> | import("react-native").RecursiveArray<false | ViewStyle | import("react-native").RegisteredStyle<ViewStyle> | null | undefined> | {
+    })[] | null;
+    styledBubbleToPrevious(): (StyleProp<ViewStyle> | {
         borderTopLeftRadius: number;
     } | {
         borderTopRightRadius: number;
-    } | null | undefined)[] | null;
-    renderQuickReplies(): {} | null | undefined;
-    renderMessageText(): {} | null | undefined;
-    renderMessageImage(): {} | null | undefined;
-    renderMessageVideo(): {} | null | undefined;
-    renderMessageAudio(): {} | null | undefined;
-    renderTicks(): {} | null | undefined;
-    renderTime(): {} | null | undefined;
+    })[] | null;
+    renderQuickReplies(): React.ReactNode;
+    renderMessageText(): React.ReactNode;
+    renderMessageImage(): React.ReactNode;
+    renderMessageVideo(): React.ReactNode;
+    renderMessageAudio(): React.ReactNode;
+    renderTicks(): React.ReactNode;
+    renderTime(): React.ReactNode;
     renderUsername(): JSX.Element | null;
-    renderCustomView(): {} | null | undefined;
+    renderCustomView(): React.ReactNode;
     renderBubbleContent(): JSX.Element;
     render(): JSX.Element;
 }
