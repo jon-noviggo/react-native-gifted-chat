@@ -23,6 +23,8 @@ import QuickReplies from './QuickReplies';
 export interface GiftedChatProps<TMessage extends IMessage = IMessage> {
     messages?: TMessage[];
     isTyping?: boolean;
+    isTypingIndicatorBackgroundColor?: string;
+    isTypingIndicatorDotsColor?: string;
     messagesContainerStyle?: StyleProp<ViewStyle>;
     text?: string;
     alignTop?: boolean;

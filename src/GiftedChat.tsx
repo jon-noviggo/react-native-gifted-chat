@@ -62,6 +62,8 @@ export interface GiftedChatProps<TMessage extends IMessage = IMessage> {
   messages?: TMessage[]
   /* Typing Indicator state */
   isTyping?: boolean
+  isTypingIndicatorBackgroundColor?: string
+  isTypingIndicatorDotsColor?: string
   /* Messages container style */
   messagesContainerStyle?: StyleProp<ViewStyle>
   /* Input text; default is undefined, but if specified, it will override GiftedChat's internal state */
