@@ -527,7 +527,6 @@ export default class Bubble<
           <TouchableWithoutFeedback
             onPress={this.onPress}
             onLongPress={this.onLongPress}
-            accessibilityHint='text'
             {...this.props.touchableProps}
           >
             <View>

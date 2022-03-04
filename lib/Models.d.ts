@@ -1,4 +1,3 @@
-/// <reference types="react" />
 import { StyleProp, ViewStyle } from 'react-native';
 export { ActionsProps } from './Actions';
 export { AvatarProps } from './Avatar';

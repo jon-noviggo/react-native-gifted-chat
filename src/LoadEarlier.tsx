@@ -111,7 +111,6 @@ export default class LoadEarlier extends React.Component<LoadEarlierProps> {
           }
         }}
         disabled={this.props.isLoadingEarlier === true}
-        accessibilityHint='button'
       >
         <View style={[styles.wrapper, this.props.wrapperStyle]}>
           {this.renderLoading()}
